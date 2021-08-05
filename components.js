@@ -5,7 +5,8 @@ class Model extends HTMLElement {
     async connectedCallback() {
         let path = this.getAttribute('src')
         let obj = await fetch(path)
-        console.log(obj)
+        let txt = await obj.text()
+        console.log(txt)
     }
 
 }
