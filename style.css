@@ -1,7 +1,27 @@
 :root {
     --color-primary: hsl(0, 0%, 10%);
+    --color-secondary: hsl(0, 0%, 20%);
+    --color-accent: hsl(0, 0%, 100%);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--color-accent);
 }
 
 body {
     background-color: var(--color-primary);
+}
+button, select, input{
+    outline: none;
+    border: solid;
+    border-color: var(--color-secondary);
+    background-color: var(--color-secondary);
+}
+selection-frame {
+    background-color: hsla(0, 0%, 0%, 0);
+    border: solid;
+    border-color: var(--color-accent);
+    transition: 0.3s;
 }
