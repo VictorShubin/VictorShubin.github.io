@@ -2,6 +2,7 @@
     --color-primary: hsl(0, 0%, 10%);
     --color-secondary: hsl(0, 0%, 20%);
     --color-accent: hsl(0, 0%, 100%);
+    --radius-small: 6px; 
 }
 
 *{
@@ -14,14 +15,29 @@ body {
     background-color: var(--color-primary);
 }
 button, select, input{
+    background-color: var(--color-secondary);
     outline: none;
     border: solid;
+    border-radius: var(--radius-small);
     border-color: var(--color-secondary);
-    background-color: var(--color-secondary);
+    transition: border-color 0.4s linear;
 }
+button:hover, select:hover, input:hover {
+    border-color: var(--color-accent);
+}
+
 selection-frame {
     background-color: hsla(0, 0%, 0%, 0);
     border: solid;
     border-color: var(--color-accent);
     transition: 0.3s;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.big-text {
+    font-size: 32px;
 }
